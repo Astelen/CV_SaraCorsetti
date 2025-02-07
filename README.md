@@ -4,9 +4,10 @@ Sara Corsetti
 
 
 Biologa della conservazione, esperta in ecologia animale e comportamento animale
+
 PhD
-Project title: “How do personality, predation, rehabilitation protocol and release methods affect the survival in western ringtail possums”, School of Agriculture and Environment.
-The University of Western Australia
+
+Project title: “How do personality, predation, rehabilitation protocol and release methods affect the survival in western ringtail possums”, School of Agriculture and Environment. The University of Western Australia
 
 
 CV - It
