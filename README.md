@@ -16,9 +16,9 @@ Inglese:
 [ENG CV S. Corsetti.pdf](https://github.com/user-attachments/files/18708946/ENG.CV.S.Corsetti.pdf)
 
 # Formazione
-- Laurea triennale in Scienze Biologiche, Universita' la Sapienza di Roma
-- Laurea magistrale in Ecobiologia, Universita' la Sapienza di Roma
-- Dottorato di ricerca in conservazione della fauna, The University of Western Australia
+Laurea triennale in Scienze Biologiche, Universita' la Sapienza di Roma<br>
+Laurea magistrale in Ecobiologia, Universita' la Sapienza di Roma<br>
+Dottorato di ricerca in conservazione della fauna, The University of Western Australia
 
 # Altre specializzazioni
 Entry level nel mondo della programmazione in Python
