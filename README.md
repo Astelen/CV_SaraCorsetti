@@ -1,6 +1,3 @@
-![image](https://github.com/user-attachments/assets/c33f4fe3-4a38-4734-b4c6-09a74fdf1a32)# CV_SaraCorsetti
-Repository_CV
-
 Sara Corsetti
 PhD
 Project title: “How do personality, predation, rehabilitation protocol and release methods affect the survival in western ringtail possums”, School of Agriculture and Environment.
