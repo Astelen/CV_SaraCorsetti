@@ -22,6 +22,6 @@ Inglese:
 Entry level nel mondo della programmazione in Python
 
 # Contatti
-![Linkedin-Logo-PNG-180x180](https://github.com/user-attachments/assets/27b266e7-1c9e-49d8-b45d-dcb035586c6d) (https://www.linkedin.com/in/sara-corsetti-38547b199/)
+![Linkedin-Logo-PNG-20x20](https://github.com/user-attachments/assets/27b266e7-1c9e-49d8-b45d-dcb035586c6d) (https://www.linkedin.com/in/sara-corsetti-38547b199/)
 (https://www.researchgate.net/profile/Sara-Corsetti)
 
