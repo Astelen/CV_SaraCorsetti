@@ -1,6 +1,6 @@
 Sara Corsetti
 
-![8DF1A19D-DDA5-4719-A5C3-398E0AAAB257](https://github.com/user-attachments/assets/424d38d1-f5d5-4947-bc45-5984aff7e6fa)
+![8DF1A19D-DDA5-4719-A5C3-398E0AAAB257](https://github.com/user-attachments/assets/cc3d2b3d-1f63-4ced-8eb7-0359fea1d255)
 
 
 Biologa della conservazione, esperta in ecologia animale e comportamento animale
