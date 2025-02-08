@@ -101,138 +101,40 @@ posto_mario.libera_posto()
 
 
 class Teatro: #2 liste, posti occupati e non occupati. 
+    lista_posti_tot = []
+    lista_posti_prenotati = []
+    
     def __init__(self, nome_teatro, numero_posti): #costruttore con parametri
         self.nome_teatro = nome_teatro
         self.numero_posti = numero_posti #posti = Lista
     #aggiungi_posto(posto): per aggiungere un nuovo posto alla lista.
         
-    lista_posti_tot = []
-    lista_posti_prenotati = []
+
     def prenota_posto_teatro(self, numero_posto, fila_posto): #cerca nella lista il posto corrispondente al numero e
         #alla fila indicati e, se lo trova, invoca il metodo prenota() sul posto.
         #Devo fare 2For.
-        for x in self.lista_posti_tot:
-            #print(x)
-            if numero_posto == x.get.numero() and fila_posto == x.get.fila():
-                for self.numero_posto in self.lista_posti_prenotati:
-                    if self.numero_posto in self.lista_posti_tot:
-                        for self.fila_posto in self.lista_posti_tot:
-                            if self.fila_posto in self.lista_posti_tot:
-                                print("Posto gia' occupato")
-                            else:
-                                print("Posto prenotabile.")
-                                scelta_pren = input("Posto standard o vip? 1/2: ")
-                                if scelta_pren == 1:
-                                    PostoStandard.prenota_posto(numero_posto, fila_posto)
-                                    self.aggiunta_posto()
-                                    print("Sei arrivo qui 1A")
-                                elif scelta_pren == 2:
-                                    PostoVIP.prenota_posto(numero_posto, fila_posto)
-                                    self.aggiunta_posto()
-                                    print("Sei arrivo qui 2A")
-                                else:
-                                    print("Scelta non valida")
-                    else:
-                        print("Il posto e' libero!")
-                        scelta_pren = int(input("Posto standard o vip? 1/2: "))
-                        if scelta_pren == 1:
-                            PostoStandard.prenota_posto()
-                            self.aggiunta_posto()
-                            print("Sei arrivo qui 1")
-                        elif scelta_pren == 2:
-                            PostoVIP.prenota_posto()
-                            self.aggiunta_posto()
-                            print("Sei arrivo qui 2")
-                        else:
-                            print("Scelta non valida")
+        posto_da_prenotare = "".join([str(numero_posto), fila_posto])
+        if posto_da_prenotare in self.numero_posti:
+            #print(postoCorrente)
+            if posto_da_prenotare in self.lista_posti_prenotati:
+                print("Posto gia' occupato")
             else:
-                print("Scelta non valida.")
-                
-    def prenota_posto_teatro2(self, numero_posto, fila_posto): ##Prova n. 2
-        for self.numero_posto in self.lista_posti_prenotati:
-                    if self.numero_posto in self.lista_posti_tot:
-                        for self.fila_posto in self.lista_posti_tot:
-                            if self.fila_posto in self.lista_posti_tot:
-                                print("Posto gia' occupato")
-                            else:
-                                print("Posto prenotabile.")
-                                scelta_pren = input("Posto standard o vip? 1/2: ")
-                                if scelta_pren == 1:
-                                    PostoStandard.prenota_posto(numero_posto, fila_posto)
-                                    self.aggiunta_posto()
-                                    print("Sei arrivo qui 1A")
-                                elif scelta_pren == 2:
-                                    PostoVIP.prenota_posto(numero_posto, fila_posto)
-                                    self.aggiunta_posto()
-                                    print("Sei arrivo qui 2A")
-                                else:
-                                    print("Scelta non valida")
-                    else:
-                        print("Il posto e' libero!")
-                        scelta_pren = input("Posto standard o vip? 1/2: ")
-                        if scelta_pren == 1:
-                            PostoStandard.prenota_posto()
-                            self.aggiunta_posto()
-                            print("Sei arrivo qui 1")
-                        elif scelta_pren == 2:
-                            PostoVIP.prenota_posto()
-                            self.aggiunta_posto()
-                            print("Sei arrivo qui 2")
-                        else:
-                            print("Scelta non valida")
-                
-    def prenota_posto_teatro3(self, numero_posto, fila_posto): #cerca nella lista il posto corrispondente al numero e
-        #alla fila indicati e, se lo trova, invoca il metodo prenota() sul posto.
-        #Devo fare 2For.
-        for x in self.lista_posti_tot:
-            if get.numero_posto() == numero_posto and fila_posto == x.get.fila():
-                for self.numero_posto in self.lista_posti_prenotati:
-                    if self.numero_posto in self.lista_posti_tot:
-                        for self.fila_posto in self.lista_posti_tot:
-                            if self.fila_posto in self.lista_posti_tot:
-                                print("Posto gia' occupato")
-                            else:
-                                print("Posto prenotabile.")
-                                scelta_pren = input("Posto standard o vip? 1/2: ")
-                                if scelta_pren == 1:
-                                    x.prenota_posto()
-                                    self.aggiunta_posto()
-                                    print("Sei arrivo qui 1A")
-                                elif scelta_pren == 2:
-                                    x.prenota_posto()
-                                    self.aggiunta_posto()
-                                    print("Sei arrivo qui 2A")
-                                else:
-                                    print("Scelta non valida")
-                    else:
-                        print("Il posto e' libero!")
-                        scelta_pren = int(input("Posto standard o vip? 1/2: "))
-                        if scelta_pren == 1:
-                            PostoStandard.prenota_posto()
-                            self.aggiunta_posto()
-                            print("Sei arrivo qui 1")
-                        elif scelta_pren == 2:
-                            PostoVIP.prenota_posto()
-                            self.aggiunta_posto()
-                            print("Sei arrivo qui 2")
-                        else:
-                            print("Scelta non valida")
-            else:
-                print("Scelta non valida.")
-        
-    def prenota_posto_teatro4(self, numero_posto, fila_posto): #prova metodo Costanza
-        self.numero_posto = numero_posto
-        self.fila_posto = fila_posto
-        #numero_posto = int(input("Inserisci il numero del posto: "))
-        #fila_posto = input("Inserisci la fila del posto")
-        if numero_posto in self.posti and fila_posto in self.posti:
-            if numero_posto in self.posti_occupati and fila_posto in self.posti_occupati:
-                print("Posto gia' occupato.")
-            else:
-                posto_prenotato = PostoVIP(numero_posto, fila_posto, True)
-                self.posti_occupati.append(posto_prenotato) 
+                print("Posto prenotabile.")
+                scelta_pren = int(input("Posto standard o vip? 1/2: "))
+                if scelta_pren == 1:
+                    nuovoPostoStandard = PostoStandard(numero_posto, fila_posto, False)
+                    nuovoPostoStandard.prenota_posto()
+                    self.aggiunta_posto(numero_posto, fila_posto)
+                    return f"Hai prenotato il posto: {posto_da_prenotare}"
+                elif scelta_pren == 2:
+                    nuovoPostoVIP = PostoVIP(numero_posto, fila_posto, False, "servizi_vari")
+                    nuovoPostoVIP.prenota_posto()
+                    self.aggiunta_posto(numero_posto, fila_posto)
+                    return f"Hai prenotato il posto: {posto_da_prenotare}"
+                else:
+                    print("Scelta non valida")
         else:
-            print("Posto non presente")
+            print("Posto non esistente.")
         
     def stampa_posti_occupati(self):
         for x in self.posti:
