@@ -24,8 +24,8 @@ Dottorato di ricerca in conservazione della fauna, The University of Western Aus
 Entry level nel mondo della programmazione in Python
 
 # Contatti
-![Linkedin-Logo-PNG-180x180](https://github.com/user-attachments/assets/332e9b9d-f5fa-41bc-845d-0ce91e6608f2)  Visita il profilo [Linkedin di Sara Corsetti]([url](https://www.linkedin.com/in/sara-corsetti-38547b199/))
+![Linkedin-Logo-PNG-180x180](https://github.com/user-attachments/assets/332e9b9d-f5fa-41bc-845d-0ce91e6608f2)  Visita il profilo LinkedIn di [Sara Corsetti](https://www.linkedin.com/in/sara-corsetti-38547b199/)
 
-![unnamed](https://github.com/user-attachments/assets/640401b5-f3a7-41fa-ab40-7fccb285ec2c)  Visita il profilo [ResearchGate di Sara Corsetti]([url]((https://www.researchgate.net/profile/Sara-Corsetti))) 
+![unnamed](https://github.com/user-attachments/assets/640401b5-f3a7-41fa-ab40-7fccb285ec2c)  Visita il profilo ResearchGate di [Sara Corsetti](https://www.researchgate.net/profile/Sara-Corsetti)
 
 
