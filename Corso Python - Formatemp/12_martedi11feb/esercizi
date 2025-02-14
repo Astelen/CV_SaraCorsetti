@@ -1,0 +1,470 @@
+num = 10
+def divisioneSomma(numero):
+    print(numero/4)
+    
+def somma():
+    var = 1
+    var += num
+    
+divisioneSomma(somma()) #passo come argomento una funzione all'altra
+
+def somma2():
+    var = 1
+    var += num
+    divisioneSomma(var) #metto una funzione dentro una funzione
+    
+    
+    
+##Fuzione per convertire stringhe in interi
+#ESercizio prova
+def intero(val):
+    if val.isdecimal():
+        return int(val)
+    else:
+        return 0
+    
+listaN = ["uno", "2", "3", "cinque"]
+listaNI = []
+
+for elemento in listaN:
+    listaNI.append(intero(elemento))
+print(listaNI)
+
+listaNI2 = list(map(intero, listaN)) #map prende la funzione senza parentesi (), nome della funzione e l'iterabile a cui applicarla
+#Fa la stessa cosa del ciclo for in una riga
+#Uso Map per applicare tutti i valori ad un'iterabile
+
+listaNI3 = [intero(x) for x in listaN] #list comprension, per salvare un elemento in una lista in una riga
+
+
+def pariD(num): #prende num e verifica se e' diverso da 0 e restituisce True o False
+    if num%2==0 and num !=0:
+        return True
+    else:
+        return False
+    
+listaNu = []
+
+for ele in listaNI3:
+    if pariD(ele):
+        listaNu.append(ele)
+        
+print(listaNu)
+
+listaNu2 = list(filter(pariD, listaNI3)) #Filter si usa per funzioni che restituiscono vero o falso, prende solo i valori Vero
+print(listaNu2)
+
+
+listaNu3 = [ele for ele in listaNI3 if pariD(ele)] #Leggo prima da dx:
+# dal For: per ogni elemento nella listaNI3
+# leggo l'If: se e' pari
+#leggo a sx: aggiungo l'elemento alla lista
+
+print(listaNu3)
+
+
+
+
+
+
+##Esercizio Palindromi
+var1 = "ciao"
+print(reversed(var1))
+
+
+stringa = 'Python'
+print (list(reversed(stringa)))
+
+tupla = ('P', 'y', 't', 'h', 'o', 'n')
+print (list(reversed(tupla)))
+
+
+
+def palindromo():
+    frase = input("Scrivi una frase: ")
+    frase_lista = []
+    for ele in frase:
+        if ele.isalpha():
+            frase_lista.append(ele)
+    frase_lista = list(frase)
+    frase_lista_reversed = reversed(frase_lista)
+    if frase_lista == frase_lista_reversed:
+        print("La frase e' palindroma")
+    else:
+        print("Fregato!")
+        
+
+
+
+prova_lista = "ciaone Andrea"
+def palindromo():
+    lista_change = []
+    for char in prova_lista:
+        if char.isalpha():
+            lista_change.append(char)
+    listareversed = reversed(lista_change)
+    if listareversed == lista_change:
+        print("La frase e' palindroma.")
+    else:
+        print("La frase non e' palindroma")
+        
+palindromo()
+
+
+fraseprova = "ciao mi chiamo Sara"
+print(fraseprova)
+print(fraseprova[::-1])  ##slicing, permette di estrapolare o ordinare alcuni caratteri. Primo num = inizio, secondo num = fine, terzo num. = step
+
+
+
+##Altra versione usando lo slicing
+def palindromo():
+    frase = input("Scrivi una frase: ")
+    frase_lista = []
+    for ele in frase:
+        if ele.isalpha():
+            frase_lista.append(ele)
+    frase_lista = list(frase)
+    frase_lista_reversed = reversed(frase_lista)
+    if frase_lista == frase_lista_reversed:
+        print("La frase e' palindroma")
+    else:
+        print("Fregato!")
+        
+        
+palindromo()
+
+
+def palindromo():
+    listafrase =list(frase)
+
+    for x in listafrase:
+        if x.isalpha():
+            listacaratteri.append(x)
+    listareversed = list(reversed(listacaratteri))
+    if listareversed == listacaratteri:
+        print ("La frase è palindroma.")
+    else:
+        print("La frase non è palindroma.")
+
+palindromo()
+
+
+
+
+# Il Cifrario di Cesare è un algoritmo di crittografia che consiste nello 
+# spostare ciascuna lettera di una certa quantità di posti nell'alfabeto. Per utilizzarlo, si
+# sceglie una chiave (scelta dall’utente) che rappresenta il numero di posti
+# di cui ogni lettera dell'alfabeto verrà spostata: ad esempio, se si sceglie
+# una chiave di 3, la lettera A diventerà D, la lettera B diventerà E e così via.
+# Per decifrare un messaggio cifrato con il cifrario di Cesare bisogna
+# conoscere la chiave utilizzata e spostare ogni lettera indietro di un numero
+# di posti corrispondente alla chiave.
+
+alfabeto = "abcdefghilmnopqrstuvz"
+lista_alfabeto = list(alfabeto)    
+def cifrario():
+
+    parola = input("Scrivi una parola: ")
+    lista_parola = list(parola)
+    chiave = int(input("Scegli una chiave per cifrare compresa tra 0 e 21: "))
+
+    nuovo_alfabeto = lista_alfabeto[chiave:] + lista_alfabeto[:chiave]
+    #print(nuovo_alfabeto)
+    parola_cifrata = []
+
+    for lettera in lista_parola:
+        if lettera in lista_alfabeto:
+            indice = lista_alfabeto.index(lettera)
+            parola_cifrata.append(nuovo_alfabeto[indice])
+        else:
+            parola_cifrata.append(lettera)
+    parola_cifrata = "".join(parola_cifrata)
+    print("Parola cifrata:", parola_cifrata)
+
+cifrario()
+
+
+def de_cifrario():
+
+    parola = input("Scrivi una parola: ")
+    lista_parola = list(parola)
+    chiave = int(input("Scegli una chiave per cifrare compresa tra 0 e 21: "))
+
+    nuovo_alfabeto = lista_alfabeto[-chiave:] + lista_alfabeto[:-chiave]
+    #print(nuovo_alfabeto)
+    parola_cifrata = []
+
+    for lettera in lista_parola:
+        if lettera in lista_alfabeto:
+            indice = lista_alfabeto.index(lettera)
+            parola_cifrata.append(nuovo_alfabeto[indice])
+        else:
+            parola_cifrata.append(lettera)
+    parola_cifrata = "".join(parola_cifrata)
+    print("Parola cifrata:", parola_cifrata)
+    
+    
+de_cifrario()
+# def de_cifrario():
+#     parola_decifrata = []
+#     parola_da_decifrare = input("Scrivi la parola da decifrare: ")
+#     chiave = int(input("Scegli la chiave per cifrare: "))
+#     for lettera in lista_parola:
+#         if lettera in lista_alfabeto:
+#             indice = lista_alfabeto.index(lettera)
+#             parola_cifrata.append(nuovo_alfabeto[indice])
+
+##Altra prova per il Cifrario di Cesare
+alfabeto = "abcdefghijklmnopqrstuvwxyz"
+punteggiatura = " .,!'?:;"
+
+def cripta(frase, chiave):
+    nuova_frase=""
+    for x in frase.lower():
+        if x in punteggiatura:
+            nuova_frase+= x
+        else:
+            x = alfabeto[(alfabeto.index(x)+chiave)%len(alfabeto)]
+            nuova_frase+=x
+    return nuova_frase
+
+
+def decripta(frase, chiave):
+    nuova_frase=""
+    for x in frase.lower():
+        if x in punteggiatura:
+            nuova_frase+= x
+        else:
+            x = alfabeto[(alfabeto.index(x)-chiave)%len(alfabeto)]
+            nuova_frase+=x
+    return nuova_frase
+
+
+criptata=cripta(" Ciao! ", 5)
+decriptata = decripta(criptata,5)
+print(f"criptata: {criptata} decriptata : {decriptata}" )
+
+
+
+###IMPORTAZIONE
+
+import random as rd ##In questo modo importo tutta la libreria, e' un sacco di codice in piu'! **as serve a dare un alias per rinominarla
+
+from random import randint, randrange
+print(randint(0, 1000))
+print(randrange(6,1000,5))
+
+
+from draft_esercizio import cripta
+cripta("Ciaone a tutti", 7) ## output 'jphvul h abaap'
+
+
+
+##funzione Choice - sceglie uno a caso
+from random import choice
+lista = [3, 4, 8, 19]
+print(choice(lista))
+
+
+from datetime import date, datetime
+print(date(2025,2,11)) #Mi formatta tutto come data! Anno, mese, giorno
+print(datetime(2025,2,11,15,56,34)) #Riceve anche orem, minuti, secondi
+print(datetime.now())  #riporta l'orario di ora
+
+
+
+numero = int(input("Inserisci un numero: "))
+
+for num in range(int(numero)): ##Ma se qui mando una stringa si sfonda tutto! Quindi uso il Try, Except
+    print ("Ciao")
+    
+    
+    
+    
+## Usare il Try e Except. Mi dice: prova questo, se non va fai l'Except.
+numero = input("Inserisci un numero: ")
+
+try:
+    for num in range(int(numero)):
+        print ("Ciao")
+except:
+    print("Numero non valido!")
+    
+print("Proseguo il programma")
+
+
+## pip serve ad installare librerie, si passa sul terminale
+#with creo il contesto
+#open riceve indirizzo del file e nome (se ho il file nella stessa cartella, scrivo solo il nome del file)
+#poi scrivo in che modo voglio che la funzione gestisca il mio file: se scrivo "r" me lo fa leggere, 
+# "a" per append se il file non esiste lo crea e senno' lo aggiunge
+with open ("prova.text", "a") as mio_file:
+    mio_file.write("Ciao\n")   #in questo modo scrivo stringhe di testo
+
+with open ("prova.text", "r") as mio_file: #lo legge, posso poi salvare il contenuto in una variabile
+    contenuto = mio_file.read()
+    
+print(contenuto)
+
+with open ("prova.text", "w") as mio_file:  ##in questo caso sovrascrive
+    mio_file.write("Ciao\n")
+    
+with open ("prova.text", "x") as mio_file:  ##Se il file esiste mi da' errore, senno' lo crea
+    mio_file.write("Ciao\n")
+    
+    
+with open ("file.csv", "r") as fileCsv:  ##Se il file esiste mi da' errore, senno' lo crea
+    contenuto = fileCsv.read()
+    
+print(contenuto.split("\n")[1].split(",")[0])
+
+
+
+
+
+
+### Eseecizio con file Csv da creare e importare, gioco numeri casuali
+
+# Scrivete un programma che genera 5 numeri casuali e li salva su un file, l’utente dovrà cercare di indovinarne almeno 2 oppure
+# avrà perso.
+
+from random import randint
+
+def scrivi_csv():
+    x = 0
+    listanum = ""
+    while x <5:
+        listanum += f"{(randint(0,10))},"
+        x +=1
+
+    with open("pippo.csv", "w") as gioco_numeri:  ###Non si fa ma funziona
+        gioco_numeri.write(listanum[:-1])
+        
+def leggi_csv():
+    with open("pippo.csv", "r") as gioco_numeri:  ###Non si fa ma funziona
+        contenuto = gioco_numeri.read()
+    return contenuto
+
+
+def indovina_numeri():
+    numeri_da_indovinare = leggi_csv()
+    numeri_da_indovinare = numeri_da_indovinare.split(",")
+    print(numeri_da_indovinare)
+    prove = 0
+    indovinate = 0
+    while prove <5 and indovinate <2:
+        numero_utente = input("Inserisci un numero: ")
+        if numero_utente in numeri_da_indovinare:
+            print("Numero indovinato!")
+            numeri_da_indovinare.remove(numero_utente)
+            indovinate += 1
+        else:
+            print("Non indovinato!")
+        prove += 1
+    if indovinate == 2:
+        print("Hai vinto!")
+    else:
+        print("BOOOOO")
+
+def menu():
+        while True:
+            print("Benvenuto nel meraviglioso gioco di indovinare i numeri!")
+
+            scelta = input("Seleziona 1 per giocare, 2 per chiudere il programma: ")
+
+            if scelta == "1":
+                scrivi_csv()
+                indovina_numeri()
+                scelta2 = input("Seleziona 1 per continuare a giocare, 2 per chiudere il programma: ")
+                if scelta2 == "1":
+                    print("Rigiochiamo!")
+                elif scelta2 == "2":
+                    print("Va bene, ciao!")
+                    break
+                else:
+                    print("Scusa ma che hai digitato?")
+
+            elif scelta == "2":
+                print("Va bene, ciao!")
+                break
+
+            else:
+                print("Opzione non valida! Riprova.")
+
+menu()
+
+
+
+
+
+
+####
+# Scrivete un programma che genera 5 numeri casuali e li salva su un file, l’utente dovrà cercare di indovinarne almeno 2 oppure
+# avrà perso.
+
+from random import randint
+
+def scrivi_csv():
+    x = 0
+    listanum = ""
+    while x <5:
+        listanum += f"{(randint(0,10))},"
+        x +=1
+
+    with open("pippo.csv", "w") as gioco_numeri:  ###Non si fa ma funziona
+        gioco_numeri.write(listanum[:-1])
+        
+def leggi_csv():
+    with open("pippo.csv", "r") as gioco_numeri:  ###Non si fa ma funziona
+        contenuto = gioco_numeri.read()
+    return contenuto
+
+
+def indovina_numeri():
+    numeri_da_indovinare = leggi_csv()
+    numeri_da_indovinare = numeri_da_indovinare.split(",")
+    print(numeri_da_indovinare)
+    prove = 0
+    indovinate = 0
+    while prove <5 and indovinate <2:
+        numero_utente = input("Inserisci un numero: ")
+        if numero_utente in numeri_da_indovinare:
+            print("Numero indovinato!")
+            numeri_da_indovinare.remove(numero_utente)
+            indovinate += 1
+        else:
+            print("Non indovinato!")
+        prove += 1
+    if indovinate == 2:
+        print("Hai vinto!")
+    else:
+        print("BOOOOO")
+
+def menu():
+        while True:
+            print("Benvenuto nel meraviglioso gioco di indovinare i numeri!")
+
+            scelta = input("Seleziona 1 per giocare, 2 per chiudere il programma: ")
+
+            if scelta == "1":
+                scrivi_csv()
+                indovina_numeri()
+                scelta2 = input("Seleziona 1 per continuare a giocare, 2 per chiudere il programma: ")
+                if scelta2 == "1":
+                    print("Rigiochiamo!")
+                elif scelta2 == "2":
+                    print("Va bene, ciao!")
+                    break
+                else:
+                    print("Scusa ma che hai digitato?")
+
+            elif scelta == "2":
+                print("Va bene, ciao!")
+                break
+
+            else:
+                print("Opzione non valida! Riprova.")
+
+menu()
+

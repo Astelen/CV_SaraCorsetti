@@ -101,7 +101,7 @@ def stampa_dati_alunni():
 diz_alunni = {}
 def stampa_dati_alunni(nome, voto, diz_alunni):
     diz_alunni[nome] = voto
-     
+    
     somma = 0
     
     
