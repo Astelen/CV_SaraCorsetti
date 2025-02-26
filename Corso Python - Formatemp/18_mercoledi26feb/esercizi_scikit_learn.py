@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
+# Neighbors =3, test_size = 0.2
 #Loading data
 data = load_iris()
 X = data.data
@@ -27,7 +28,7 @@ print(accuracy)
 
 
 
-# Riduciamo il test_size per verificare l'accuratezza
+# Riduciamo il test_size per verificare l'accuratezza, neighbors =3, test_size = 0.1
 #Loading data
 data = load_iris()
 X = data.data
@@ -52,7 +53,7 @@ print(accuracy)
 
 
 
-#Aumentiamo il test_size per verificare l'accuratezza
+#Aumentiamo il test_size per verificare l'accuratezza: neighbors =3, test_size = 0.8
 #Loading data
 data = load_iris()
 X = data.data
@@ -76,7 +77,7 @@ print(accuracy)
 
 
 
-#Provo a cambiare anche n. neighbors =5
+#Provo a cambiare anche n. neighbors =5, test_size = 0.2
 data = load_iris()
 X = data.data
 y = data.target
@@ -100,7 +101,7 @@ print(accuracy)
 
 
 
-#Provo a cambiare anche n. neighbors =10
+#Provo a cambiare anche neighbors =10, test_size = 0.2
 data = load_iris()
 X = data.data
 y = data.target
@@ -125,7 +126,7 @@ print(accuracy)
 
 
 
-#Provo a cambiare anche n. neighbors =10, test_size = 40
+#Provo a cambiare anche n. neighbors =10, test_size = 0.4
 data = load_iris()
 X = data.data
 y = data.target
