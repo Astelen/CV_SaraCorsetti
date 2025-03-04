@@ -314,7 +314,7 @@ with open ("prova.text", "x") as mio_file:  ##Se il file esiste mi da' errore, s
     mio_file.write("Ciao\n")
     
     
-with open ("file.csv", "r") as fileCsv:  ##Se il file esiste mi da' errore, senno' lo crea
+with open ("file.", "r") as fileCsv:  ##Se il file esiste mi da' errore, senno' lo crea
     contenuto = fileCsv.read()
     
 print(contenuto.split("\n")[1].split(",")[0])
