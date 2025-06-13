@@ -173,7 +173,7 @@ y_km = km.predict(X)
 
 # Visualizza i cluster ottenuti utilizzando tecniche di visualizzazione adeguate
 #(ad esempio, plot 2D delle prime due componenti principali).
-pca_iris = PCA(n_components=2)
+pca_iris = (n_components=2)
 X_pca = pca_iris.fit_transform(X)
 plt.figure(figsize=(12, 6))
 plt.scatter(X_pca[:, 0], X_pca[:, 1], c=y, s=50, cmap='viridis')

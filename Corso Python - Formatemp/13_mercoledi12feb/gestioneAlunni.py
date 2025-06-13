@@ -60,6 +60,9 @@ def visualizzaAlunni(tabella,fileT):
             print(f"Nome Alunno: {riga[0]}, Cognome Alunno: {riga[1]}, Voto1: {riga[2]}, Voto2: {riga[3]}, Voto3: {riga[4]}, Media: {sum([int(riga[2]),int(riga[3]),int(riga[4])])/3}")
     else:
         print("nessun alunno presente!")
+
+
+##Programma gestione studenti
 print("Benvenuto nel programma di gestione studenti!\n")
 tabella, fileT = inizio()
 while True:
