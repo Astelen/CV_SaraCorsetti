@@ -10,10 +10,12 @@
 
 ## CV
 Italiano:
-[IT CV S. Corsetti.pdf](https://github.com/user-attachments/files/18708943/IT.CV.S.Corsetti.pdf)
+[IT CV S. Corsetti.pdf](https://github.com/user-attachments/files/20736739/CV.Sara.Corsetti.IT.pdf)
+
 
 Inglese:
-[ENG CV S. Corsetti.pdf](https://github.com/user-attachments/files/18708946/ENG.CV.S.Corsetti.pdf)
+[ENG CV S. Corsetti.pdf](https://github.com/user-attachments/files/20736741/CV.Sara.Corsetti.ENG.pdf)
+
 
 # Formazione
 Laurea triennale in Scienze Biologiche, Universita' la Sapienza di Roma<br>
